@@ -1,5 +1,16 @@
-﻿int random = new Random().Next(100, 1000);
-Console.WriteLine("Сгенерированное число: " + random);
+﻿int number = Random();
+Console.WriteLine("Сгенерированное число: " + number);
+numberA(number);
 
-int number = (random / 10) % 10;
-Console.WriteLine("Вторая цифра трехзначного числа: " + number);
+
+void numberA(int number)
+{
+	int secondNumber = (number / 10) % 10;
+	Console.WriteLine("Вторая цифра числа: " + secondNumber);
+}
+
+int Random()
+{
+	Random random = new Random();
+	return random.Next(100, 1000);
+}
