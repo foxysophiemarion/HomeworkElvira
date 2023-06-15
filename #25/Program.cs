@@ -26,8 +26,8 @@ bool numberB(int digitB)
 	return true;
 }
 
-int digitA = Promt("Введите число A: ");
-int digitB = Promt("Введите число B: ");
+int digitA = Prompt("Введите число A: ");
+int digitB = Prompt("Введите число B: ");
 
 if (numberB(digitB))
 {
