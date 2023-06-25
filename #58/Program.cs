@@ -1,18 +1,16 @@
 ﻿int[,] matrix1, matrix2, resultMatrix;
 
-// Получаем первую матрицу
+
 Console.WriteLine("Введите размерность первой матрицы (MxN):");
 int m1 = PromptInt("M");
 int n1 = PromptInt("N");
 matrix1 = GetMatrix("первой", m1, n1);
 
-// Получаем вторую матрицу
 Console.WriteLine("Введите размерность второй матрицы (NxP):");
 int n2 = PromptInt("N");
 int p2 = PromptInt("P");
 matrix2 = GetMatrix("второй", n2, p2);
 
-// Проверяем, можно ли перемножить матрицы
 if (n1 != n2)
 {
 	Console.WriteLine("Умножение невозможно! Количество столбцов первой матрицы не равно количеству строк второй матрицы.");
@@ -20,10 +18,8 @@ if (n1 != n2)
 	return;
 }
 
-// Создаем результирующую матрицу
 resultMatrix = new int[m1, p2];
 
-// Вычисляем произведение матриц
 for (int i = 0; i < m1; i++)
 {
 	for (int j = 0; j < p2; j++)
@@ -37,14 +33,11 @@ for (int i = 0; i < m1; i++)
 	}
 }
 
-// Выводим результат
 Console.WriteLine("Результат умножения матриц:");
 PrintMatrix(resultMatrix);
 
-Console.ReadKey();
 
 
-// Метод для получения матрицы от пользователя
 static int[,] GetMatrix(string matrixName, int rows, int columns)
 {
 	int[,] matrix = new int[rows, columns];
@@ -59,7 +52,7 @@ static int[,] GetMatrix(string matrixName, int rows, int columns)
 	return matrix;
 }
 
-// Метод для вывода матрицы в консоль
+
 static void PrintMatrix(int[,] matrix)
 {
 	for (int i = 0; i < matrix.GetLength(0); i++)
@@ -72,7 +65,7 @@ static void PrintMatrix(int[,] matrix)
 	}
 }
 
-// Метод для получения введенного пользователем целого числа
+
 static int PromptInt(string prompt)
 {
 	while (true)
